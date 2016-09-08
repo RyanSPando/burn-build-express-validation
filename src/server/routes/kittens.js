@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
   renderObject.title = 'Kittens';
   knex('kittens')
     .then(animals => {
-      renderObject.data = animals;
+      renderObject.kittens = animals;
       res.render('kittens', renderObject);
     })
     .catch(err => {

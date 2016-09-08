@@ -6,7 +6,47 @@
 
   <div class="container">
     <h1>{{title}}</h1>
-    <h2>data:{{data}}</h2>
+    <a href="/kittens/new">Add Kitten</a>
+    <table class="table table-striped">
+      <thead>
+        <th>
+          ID
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Breed
+        </th>
+        <th>
+          Age
+        </th>
+        <th>
+          Color
+        </th>
+      </thead>
+      <tbody>
+        {% for kitten in kittens %}
+        <tr>
+          <td>
+            {{kitten.id}}
+          </td>
+          <td>
+            {{kitten.name}}
+          </td>
+          <td>
+            {{kitten.breed}}
+          </td>
+          <td>
+            {{kitten.age}}
+          </td>
+          <td>
+            {{kitten.color}}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 
 {% endblock %}
